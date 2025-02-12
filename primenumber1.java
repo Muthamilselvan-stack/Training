@@ -1,6 +1,6 @@
 public class primenumber1 {
     public static void main(String[] args) {
-        System.out.println("Prime numbers between 1 and 100 are:");
+        System.out.println("Prime numbers between 1 and 1000 are:");
         
        
         for (int num = 2; num <= 1000; num++) {
