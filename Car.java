@@ -1,18 +1,19 @@
-public class Car {
-    private String brand;
-    public Car() {
-        this.brand = "unknown";
+class Vehicle
+{
+    String Model="GT";
+    public void Sound()
+    {
+        System.out.println("Hurrr!");
     }
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-    public String getBrand() {
-        return brand;
-    }
-    public static void main(String[] args) {
-        Car myCar = new Car();
-        System.out.println("Brand: " + myCar.getBrand()); 
-        myCar.setBrand("Ford");
-        System.out.println("Brand: " + myCar.getBrand()); 
+}
+class Car extends Vehicle
+{
+    String Brand="Mustang";
+    public static void main(String a[])
+    {
+        Car myCar=new Car();
+        myCar.Sound();
+        
+        System.out.println(myCar.Brand + " " + myCar.Model);
     }
 }
