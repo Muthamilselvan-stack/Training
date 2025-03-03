@@ -1,29 +1,31 @@
-class SuperMost {
-    private int privateValue = 100;
-    public int getPrivateValue() {
-    return privateValue;
+class Shape
+{
+    void Area(){
+    
+        System.out.println("Area of the Shape");
     }
 }
-class Super extends SuperMost {
-    protected int protectedValue = 200;
-}
-
-class SubClass extends Super {
-    int defaultValue = 300; 
-
-    void displayValues() {
-        System.out.println("Private Value   : " + getPrivateValue());
-
-        System.out.println("Protected Value : " +  protectedValue);
- 
-        System.out.println("Default Value   : " +    defaultValue);
+class Rectangle extends Shape
+{
+    double length,breadth;
+    Rectangle(double length,double breadth)
+    {
+        this.length=length;
+        this.breadth=breadth;
     }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        SubClass obj = new SubClass();
-        obj.displayValues();
+    void Area()
+    {
+        super.Area();
+        System.out.println("Area of the Rectangle : " + length*breadth);
     }
 }
 
+public class Main 
+{
+    public static void main(String s[])
+    {
+        Rectangle myArea=new Rectangle(12.0,13.0);
+        myArea.Area();
+        
+    }
+}
